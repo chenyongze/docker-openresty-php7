@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  xgk:
+    build: .
+    container_name: xgk-openresty-php7
+    restart: always
+    ports:
+      - 8881:80
+      - 8883:443
+    volumes:
+      - ./app:/var/www/html
